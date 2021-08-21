@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+body {
+    background-color: hsl(210, 46%, 95%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    width: 1000px;
+    height: 320px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 400px auto;
+}
+#drawers {
+    max-height: 320px;
+    border-radius: 20px 0px 0px 20px;
+}
+#boxtext {
+    padding: 30px;
+}
+#boxtext > #title {
+    font-size: 15px;
+    color: hsl(217, 19%, 35%);
+    margin-bottom: 10px;
+}
+#boxtext > #text {
+    color: hsl(214, 17%, 51%)
+}
+#boxtext > #footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#boxtext > #footer > #profile {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#profile > #avatar {
+    border-radius: 50%;
+    height: 50px;
+}
+#profiletext > #name {
+    font-weight: bold;
+    color: hsl(217, 19%, 35%);
+}
+#profiletext > #date {
+    color: hsl(214, 17%, 51%);
+}
+
+
+/* drop do share*/
+/*.sharebox {
+    background-color: gray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 180px;
+    padding: 15px;
+    border-radius: 10px;
+    
+}*/
+
+/*começa aqui*/
+
+.sharebtn {
+   border-radius: 100%;
+   padding: 15px;
+   border: none;
+   width: fit-content;
+   margin: 0px auto;
+}
+
+
+
+.shareup {
+    border: 2px solid greenyellow;
+    display: grid;
+    justify-content: center;
+    position: relative;
+    bottom: 40px;
+}
+.sharebtn {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+#shareup-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    background-color: greenyellow;
+    width: 200px;
+    margin-bottom: 15px;
+    z-index: 1;
+    padding: 15px;
+    border-radius: 10px;
+    visibility: hidden; /*ponha para visible*/
+}
+
+.show {
+    visibility: visible;
+}
