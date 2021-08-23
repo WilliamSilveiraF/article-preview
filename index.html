@@ -8,42 +8,44 @@
     <link rel="stylesheet" href="mystyle.css">
 </head>
 <body>
-    <main>
-        <img 
-        src="/images/drawers.jpg" 
-        alt="drawers"
-        id="drawers">
-        <div id="boxtext">
-            <div id="title"><h1>Shift the overall look and feel by adding these wonderful touches to furniture in your home       
-            </h1></div>
-            <div id="text"><p>Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I've got some simple tips to help you make any room feel complete.
-            </p></div>
-            <div id="footer">
-                <div id="profile">
-                    <img
-                    id="avatar"
-                    src="/images/avatar-michelle.jpg" 
-                    alt="Michelle">
-                    <div id="profiletext">
-                        <p id="name">Michelle Appleton</p>
-                        <p id="date">28 Jun 2020</p>
-                    </div>
+<main>
+    <img 
+    src="/images/drawers.jpg" 
+    alt="drawers"
+    id="drawers">
+    <div id="boxtext">
+        <div id="title"><h1>Shift the overall look and feel by adding these wonderful touches to furniture in your home       
+        </h1></div>
+        <div id="text"><p>Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I've got some simple tips to help you make any room feel complete.
+        </p></div>
+        <div id="footer">
+            <div id="profile">
+                <img
+                id="avatar"
+                src="/images/avatar-michelle.jpg" 
+                alt="Michelle">
+                <div id="profiletext">
+                    <p id="name">Michelle Appleton</p>
+                    <p id="date">28 Jun 2020</p>
                 </div>
-                <div class="shareup">
-                    <div id="shareup-content">
-                    <p>S H A R E</p>
+            </div>
+            <div class="shareup">
+                    <div><button onclick="myFunction()" class="sharebtn"><img src="/images/icon-share.svg"></button></div>
+                    <div id= "myShareup" class="shareupcontent">
+                    <div><p>S H A R E</p></div>
+                    <div class="triang"></div>
                     <a><img src="/images/icon-facebook.svg"></a>
                     <a><img src="/images/icon-twitter.svg"></a>
                     <a><img src="/images/icon-pinterest.svg"></a>                 
                     </div>
-                    <button onclick="myFunction()" class="sharebtn"><img src="/images/icon-share.svg"></button>
-                </div>
             </div>
         </div>
+    </div> 
     </main>
 <script>
+    /*abra o dropup*/
     function myFunction() {
-        document.getElementById("shareup-content").classList.toggle("show");
+        document.getElementById("myShareup").classList.toggle("show");
     }
 </script>
 </body>
