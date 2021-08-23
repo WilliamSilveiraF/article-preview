@@ -1,12 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+/* resetando*/
 * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
     font-family: 'Manrope', sans-serif;
 }
+:root {
+    --azul-claro: hsl(210, 46%, 95%);
+    --azul-cinzento: hsl(214, 17%, 51%);
+    --azul-escuro: hsl(217, 19%, 35%);
+    --branco: rgb(255, 255, 255);
+}
 body {
-    background-color: hsl(210, 46%, 95%);
+    background-color: var(--azul-claro);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +24,7 @@ body {
 main {
     width: 1000px;
     height: 320px;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--branco);
     border-radius: 20px;
     display: grid;
     grid-template-columns: 400px auto;
@@ -30,12 +37,11 @@ main {
     padding: 30px;
 }
 #boxtext > #title {
-    font-size: 15px;
     color: hsl(217, 19%, 35%);
     margin-bottom: 10px;
 }
 #boxtext > #text {
-    color: hsl(214, 17%, 51%)
+    color: var(--azul-escuro)
 }
 #boxtext > #footer {
     display: flex;
@@ -54,10 +60,10 @@ main {
 }
 #profiletext > #name {
     font-weight: bold;
-    color: hsl(217, 19%, 35%);
+    color: var(--azul-cinzento);
 }
 #profiletext > #date {
-    color: hsl(214, 17%, 51%);
+    color: var(--azul-escuro);
 }
 
 
@@ -78,8 +84,8 @@ main {
     cursor: pointer;
 }
 .shareupcontent {
-    color: hsl(210, 46%, 95%);
-    background-color: hsl(214, 17%, 51%);
+    color: var(--azul-claro);
+    background-color: var(--azul-escuro);
     padding: 10px;
     display: flex;
     justify-content: space-around;
@@ -94,9 +100,78 @@ main {
 .triang {
     height: 20px;
     width: 20px;
-    background-color: hsl(214, 17%, 51%);
+    background-color: var(--azul-escuro);
     transform: rotate(45deg);
     position: relative;
     top: 15px;
     left: 6.5px;
+}
+
+@media (max-width: 1000px) {
+    main {
+        width: 66vw;
+        height: auto;
+        display: grid;
+        grid-template-columns: auto;
+    }
+    #drawers {
+        max-height: unset;
+        max-width: 66vw;
+        border-radius: 20px 20px 0px 0px;
+    }
+    #boxtext {
+        padding: 0px;
+    }
+    #boxtext > #title {
+        font-size: 80%;
+        padding: 10px 10px 0px 10px;
+    }
+    #boxtext > #text {
+        padding: 0px 10px 0px 10px;
+    }
+    
+    #boxtext > #footer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;       
+    }
+    #boxtext > #footer > #profile {
+        display: flex;
+        justify-content: space-between;
+        margin-left: calc(16% - 5px);
+        position: relative;
+        top: 65px;
+    }
+    .shareup {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+        z-index: 0;
+        position: unset;
+        width: 66vw;
+        border-radius: 0px 0px 20px 20px;
+        height: 75px;
+    }
+    .triang {
+        height: unset;
+        width: unset;
+    }
+    .shareupcontent {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 230px;
+        height: 60px;
+        margin-bottom: 0px;
+        visibility: hidden;
+    }
+    .show {visibility: visible;
+    }
+    .show2 {
+        background-color: var(--azul-escuro);
+    }
+}
+a {
+    cursor: pointer;
 }

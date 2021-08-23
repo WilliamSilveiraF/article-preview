@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>teste2</title>
+    <title>teste3</title>
     <link rel="stylesheet" href="mystyle.css">
 </head>
 <body>
@@ -29,8 +29,8 @@
                     <p id="date">28 Jun 2020</p>
                 </div>
             </div>
-            <div class="shareup">
-                    <div><button onclick="myFunction()" class="sharebtn"><img src="/images/icon-share.svg"></button></div>
+            <div id= "myShareupback" class="shareup">
+                    <div><button onclick="myFunction();myBackground();" class="sharebtn"><img src="/images/icon-share.svg"></button></div>
                     <div id= "myShareup" class="shareupcontent">
                     <div><p>S H A R E</p></div>
                     <div class="triang"></div>
@@ -46,6 +46,10 @@
     /*abra o dropup*/
     function myFunction() {
         document.getElementById("myShareup").classList.toggle("show");
+    }
+    /*Tela menor 1000px background do ".shareup" virar azul escuro*/
+    function myBackground() {
+        document.getElementById("myShareupback").classList.toggle("show2");
     }
 </script>
 </body>
