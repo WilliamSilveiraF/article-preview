@@ -134,12 +134,12 @@ main {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: flex-start;       
+        justify-content: flex-start; 
     }
     #boxtext > #footer > #profile {
         display: flex;
         justify-content: space-between;
-        margin-left: calc(16% - 5px);
+        margin-left: calc(16% - 38px);
         position: relative;
         top: 65px;
     }
